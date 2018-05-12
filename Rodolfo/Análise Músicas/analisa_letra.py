@@ -2,6 +2,7 @@ import io
 import string
 import urllib2
 
+
 # 3rd Party
 from PIL import Image
 import numpy as np
