@@ -18,19 +18,23 @@ def media_palavras_por_genero(genero):
 	return media_palavras / len(path_musicas)
 
 
-generos = ['funk', 'rock', 'sertanejo']
+generos = ['forro', 'funk', 'mpb', 'rock', 'sertanejo']
 
 medias = {}
 for genero in generos:
 	medias[genero.upper()] = media_palavras_por_genero(genero)
 
+print(medias)
 
 from pylab import *
 
-grafico = bar(medias.keys(), medias.values(), width=0.3, color=['red', 'black', 'green'])
+grid(zorder=0)
+yticks(range(0,400,20))
+title('média de palavras por letra em cada gênero musical'.upper())
 
-mng = plt.get_current_fig_manager()
+grafico = bar(medias.keys(), medias.values(), width=0.3, color=['yellow', 'blue', 'red', 'black', 'green'], zorder=3)
+
+mng = get_current_fig_manager()
 mng.window.showMaximized()
-
 
 show()
