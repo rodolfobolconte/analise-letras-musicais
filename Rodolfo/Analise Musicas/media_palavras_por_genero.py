@@ -32,4 +32,5 @@ grafico = bar(medias.keys(), medias.values(), width=0.3, color=['red', 'black', 
 mng = plt.get_current_fig_manager()
 mng.window.showMaximized()
 
+
 show()
