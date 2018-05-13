@@ -24,15 +24,25 @@ medias = {}
 for genero in generos:
 	medias[genero.upper()] = media_palavras_por_genero(genero)
 
-print(medias)
+
 
 from pylab import *
 
-grid(zorder=0)
-yticks(range(0,400,20))
-title('média de palavras por letra em cada gênero musical'.upper())
+fig, eixo = plt.subplots(nrows=1, ncols=1, figsize=(80, 7))
+grafico = eixo.bar(medias.keys(), medias.values(), width=0.3, color=['yellow', 'blue', 'red', 'black', 'green'], zorder=3, tick_label=['FORRÓ', 'FUNK', 'MPB', 'ROCK', 'SERTANEJO'])
 
-grafico = bar(medias.keys(), medias.values(), width=0.3, color=['yellow', 'blue', 'red', 'black', 'green'], zorder=3)
+for i in grafico:
+        height = i.get_height()
+        eixo.text(i.get_x() + i.get_width() / 2, 1.01 * height, '%.1f' % height, fontsize=12, ha='center',
+                      va='bottom')
+
+grid(zorder=0)
+
+yticks(range(0,400,20))
+
+eixo.set_title('média de palavras por letra em cada gênero musical'.upper())
+eixo.set_ylabel('quantidade média'.upper())
+eixo.set_xlabel('gêneros musicais'.upper())
 
 mng = get_current_fig_manager()
 mng.window.showMaximized()
