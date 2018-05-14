@@ -28,7 +28,7 @@ for i in grafico:
 
 grid(zorder=0)
 
-yticks(range(0,400,20))
+yticks(range(0,10,1))
 
 eixo.set_title('média de palavras por letra em cada gênero musical'.upper())
 eixo.set_ylabel('quantidade média'.upper())
