@@ -1,7 +1,7 @@
-
+path_raiz = "MediaEntropia/"
 
 def media_entropia_por_genero(genero):
-    arquivo_music = open(genero  + '_entropia.txt' , 'r')
+    arquivo_music = open(path_raiz + genero  + '_entropia.txt' , 'r')
     media = 0
     for linha in arquivo_music:
         leitura  = linha.split("\n")
@@ -10,11 +10,12 @@ def media_entropia_por_genero(genero):
     
     return media/20
     
-generos = ['forro', 'mpb','rock','sertanejo','funk']
+generos = ['forro', 'funk', 'mpb', 'rock', 'sertanejo']
 medias = {}
 for genero in generos:
 	medias[genero.upper()] = media_entropia_por_genero(genero)
 
+#print(medias)
 
 from pylab import *
 

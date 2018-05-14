@@ -24,7 +24,7 @@ medias = {}
 for genero in generos:
 	medias[genero.upper()] = media_palavras_por_genero(genero)
 
-
+#print(medias)
 
 from pylab import *
 
