@@ -4,10 +4,8 @@ import io
 import string
 import urllib2
 
-# 3rd Party
 from PIL import Image
 import numpy as np
-#from matplotlib import pyplot as plt
 from scipy import ndimage
 import os
 
@@ -41,15 +39,9 @@ def media_palavras_por_genero(genero):
         sorted_word_count_information = list(sorted(word_count_information, key=lambda k:k[2], reverse=True))
 
         for ii in sorted_word_count_information:
-    # Very inelegant way of formatting
             separation = '\t\t' if len(ii[0]) < 7 else '\t'
-            if len(ii[0]) >= 15: separation = '' 
-        
-            arquivo_music = open(genero  + '_auto_informacao.txt' , 'a')
-            arquivo_music.writelines(ii[0])
-            arquivo_music.writelines('\t')
-            arquivo_music.writelines(str(ii[2]))
-            arquivo_music.writelines('\n')
+
+        arquivo_music = open(genero  + '_entropia.txt' , 'a')
         
 
 generos = ['forro', 'mpb','rock','sertanejo','funk']
