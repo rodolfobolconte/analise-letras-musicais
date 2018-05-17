@@ -44,6 +44,8 @@ eixo.set_title('média de palavras por letra em cada gênero musical'.upper())
 eixo.set_ylabel('quantidade média'.upper())
 eixo.set_xlabel('gêneros musicais'.upper())
 
+fig.canvas.set_window_title('média de palavras por letra em cada gênero musical'.upper())
+
 mng = get_current_fig_manager()
 mng.window.showMaximized()
 

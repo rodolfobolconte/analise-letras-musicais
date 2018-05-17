@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon May 14 14:15:28 2018
-
-@author: mique
-"""
-
 def media_autoinformacao_por_genero(genero):
     arquivo_music = open('Auto_Informacao/' + genero  + '_auto_informacao.txt' , 'r')
     valores = []

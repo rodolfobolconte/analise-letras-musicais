@@ -35,6 +35,8 @@ eixo.set_title('entropia média de músicas por gênero musical'.upper())
 eixo.set_ylabel('entropia média'.upper())
 eixo.set_xlabel('gêneros musicais'.upper())
 
+fig.canvas.set_window_title('entropia média de músicas por gênero musical'.upper())
+
 mng = get_current_fig_manager()
 mng.window.showMaximized()
 
