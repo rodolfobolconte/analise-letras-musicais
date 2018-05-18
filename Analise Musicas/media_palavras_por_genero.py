@@ -24,8 +24,6 @@ medias = {}
 for genero in generos:
 	medias[genero.upper()] = media_palavras_por_genero(genero)
 
-#print(medias)
-
 from pylab import *
 
 fig, eixo = plt.subplots(nrows=1, ncols=1, figsize=(80, 7))
